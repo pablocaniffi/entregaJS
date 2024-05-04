@@ -1,3 +1,30 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* declaración de fuentes descargadas */
+@font-face {
+  font-family: fasterstroker;
+  src: url(../fonts/fasterstroker.otf);
+}
+@font-face {
+  font-family: greekfreak;
+  src: url(../fonts/greekfreak.ttf);
+}
+@font-face {
+  font-family: hiromisake;
+  src: url(../fonts/hiromisake.ttf);
+}
+@font-face {
+  font-family: blankspace-solid;
+  src: url(../fonts/hiromisake.ttf);
+}
+@font-face {
+  font-family: blankspace-sketch;
+  src: url(../fonts/hiromisake.ttf);
+}
 
 /*# sourceMappingURL=estilos.css.map */
