@@ -90,16 +90,41 @@ pilotos.push(new piloto("Yuki Tsunoda" , "Scuderia Alpha Tauri" , "Número 22"))
 pilotos.push(new piloto("Logan Sargeant" , "Willliams" , "Número 2"));
 pilotos.push(new piloto("Alexander Albon" , "Williams" , "Número 23"));
 
+function competidor (conductor) {
+    let i = 0;
+    for (i=0 ; i>conductor.length ; i ++){
+        let card = document.createElement("section");
+        card.classList.add("card");
+        card.classList.add("col-lg-4");
+        card.classList.add("col-md-6");
+        card.classList.add("col-sm-12");
+        
+        console.log(conductor[3].nombre);
+        let foto = document.createElement("div");
+        foto.classList.add("foto");
+    
+        let info = document.createElement("ul");
+        info.classList.add("info")
+        let infoNombre = document.createElement("li");
+        infoNombre = conductor[i].nombre;
+        let infoEscuderia = document.createElement("li");
+        infoEscuderia = conductor[i].escuderia;
+        let infoNumero = document.createElement("li");
+        infoNumero = conductor[i].numero;
+    
+        info.appendChild(infoNombre);
+        info.appendChild(infoEscuderia);
+        info.appendChild(infoNumero);
+    
+        card.appendChild(foto);
+        card.appendChild(info);
+    
+        miBody.appendChild(card);
+        console.log(infoEscuderia);
+    };
+};
 
-let card = document.createElement("section");
-card.classList.add("card");
-card.classList.add("col-lg-4");
-card.classList.add("col-md-6");
-card.classList.add("col-sm-12");
-let foto = document.createElement("div");
-foto.classList.add("foto");
-let info = document.createElement("ul");
-info.classList.add("info")
+competidor(pilotos);
 
 
 
