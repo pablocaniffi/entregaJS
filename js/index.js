@@ -60,6 +60,7 @@ h3Titulo.classList.add("tituloPrincipal");
 h3Titulo.classList.add("col-12");
 h3Titulo.innerText = "Pilotos".toUpperCase();
 divRowMain.appendChild(h3Titulo);
+principal.appendChild(divRowMain);
 
 
 function piloto (nombre , escuderia , numero) {
@@ -92,25 +93,25 @@ pilotos.push(new piloto("Alexander Albon" , "Williams" , "Número 23"));
 
 function competidor (conductor) {
     let i = 0;
-    for (i=0 ; i>conductor.length ; i ++){
+    for (i=0 ; i<conductor.length ; i++){
         let card = document.createElement("section");
         card.classList.add("card");
         card.classList.add("col-lg-4");
         card.classList.add("col-md-6");
         card.classList.add("col-sm-12");
         
-        console.log(conductor[3].nombre);
+        console.log(pilotos[3].nombre);
         let foto = document.createElement("div");
         foto.classList.add("foto");
     
         let info = document.createElement("ul");
         info.classList.add("info")
         let infoNombre = document.createElement("li");
-        infoNombre = conductor[i].nombre;
+        infoNombre.innerText = conductor[i].nombre;
         let infoEscuderia = document.createElement("li");
-        infoEscuderia = conductor[i].escuderia;
+        infoEscuderia.innerText = conductor[i].escuderia;
         let infoNumero = document.createElement("li");
-        infoNumero = conductor[i].numero;
+        infoNumero.innerText = conductor[i].numero;
     
         info.appendChild(infoNombre);
         info.appendChild(infoEscuderia);
@@ -119,8 +120,7 @@ function competidor (conductor) {
         card.appendChild(foto);
         card.appendChild(info);
     
-        miBody.appendChild(card);
-        console.log(infoEscuderia);
+        principal.appendChild(card);
     };
 };
 
@@ -128,5 +128,4 @@ competidor(pilotos);
 
 
 
-principal.appendChild(divRowMain);
 miBody.appendChild(principal);
