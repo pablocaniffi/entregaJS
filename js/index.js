@@ -3,33 +3,105 @@
 const miHead = document.head;
 const miBody = document.body;
 
+
 // header
 let miHeader = document.createElement("header");
 miHeader.classList.add("container-fluid");
 miBody.appendChild(miHeader);
 
-let divRow = document.createElement("div");
-divRow.classList.add("row");
-divRow.classList.add("encabezado");
-miHeader.appendChild(divRow);
+let divRowHeader = document.createElement("div");
+divRowHeader.classList.add("row");
+divRowHeader.classList.add("encabezado");
+miHeader.appendChild(divRowHeader);
 
-let imagenHeader = document.createElement("a");
-imagenHeader.innerHTML = '<a href="../index.html"><img src="../multimedia/inicio/1logof1.webp" alt="logoF1" class="logoF1"></a>'; 
-// ya dentro del propio innerHTML está su clase
-imagenHeader.classList.add("col-4");
+let imagenHeader = document.createElement("div");
+imagenHeader.innerHTML = '<a href="#"><img src="./multimedia/logof1.webp" alt="logoF1" class="logoF1"></a>';
+// clase agregada dentro de imagen
+imagenHeader.classList.add("col-3");
 
 let h1Titulo = document.createElement("h1");
 h1Titulo.classList.add("tituloPrincipal");
-h1Titulo.classList.add("col-8");
+h1Titulo.classList.add("col-9");
 h1Titulo.innerText = "Formula 1";
 
-divRow.appendChild(imagenHeader);
-divRow.appendChild(h1Titulo);
+divRowHeader.appendChild(imagenHeader);
+divRowHeader.appendChild(h1Titulo);
 // fin header
 
-// nav
-let navegador = document.createElement("nav");
-nav.classList.add("content-fluid");
-miBody.appendChild(navegador);
 
-// navegador.appendChild(divRow);
+
+// aside (puro SASS)
+let lateral = document.createElement("aside");
+lateral.classList.add("lateral");
+miBody.appendChild(lateral);
+// fin aside
+
+
+
+// nav
+let nav = document.querySelector(".encabezado");
+let itemsNombre = nav.querySelectorAll("h2");
+let itemsRedes = nav.querySelectorAll("a");
+itemsNombre.forEach((item)=>item.classList.add("redes"));
+itemsRedes.forEach((item)=>item.classList.add("redes"));
+// fin nav
+
+
+// main
+let principal = document.createElement("main");
+principal.classList.add("principal");
+principal.classList.add("content-fluid");
+
+let divRowMain = document.createElement("div");
+divRowMain.classList.add("row");
+
+let h3Titulo = document.createElement("h3");
+h3Titulo.classList.add("tituloPrincipal");
+h3Titulo.classList.add("col-12");
+h3Titulo.innerText = "Pilotos".toUpperCase();
+divRowMain.appendChild(h3Titulo);
+
+
+function piloto (nombre , escuderia , numero) {
+    this.nombre = nombre,
+    this.escuderia = escuderia,
+    this.numero = numero
+};
+
+let pilotos = [];
+pilotos.push(new piloto("Esteban Ocon" , "Alpine" , "Número 31"));
+pilotos.push(new piloto("Pierre Gasly" , "Alpine" , "Número 10"));
+pilotos.push(new piloto("Fernando Alonso" , "Aston Martin" , "Número 14"));
+pilotos.push(new piloto("Lance Stroll" , "Aston Martin" , "Número 18"));
+pilotos.push(new piloto("Charles Lecler" , "Ferrari" , "Número 16"));
+pilotos.push(new piloto("Carlos Sainz" , "Ferrari" , "Número 55"));
+pilotos.push(new piloto("Kevin Magnussen" , "HAAS F1 Team" , "Número 20"));
+pilotos.push(new piloto("Nico Hulkenberg" , "HAAS F1 Team" , "Número 27"));
+pilotos.push(new piloto("Lando Norris" , "McLaren F1" , "Número 4"));
+pilotos.push(new piloto("Oscar Piastri" , "McLaren F1" , "Número 81"));
+pilotos.push(new piloto("Lewis Hamilton" , "Mercedes" , "Número 44"));
+pilotos.push(new piloto("George Russell" , "Mercedes" , "Número 63"));
+pilotos.push(new piloto("Max Verstappen" , "Red Bull Racing" , "Número 1"));
+pilotos.push(new piloto("Sergio Pérez" , "Red Bull Racing" , "Número 11"));
+pilotos.push(new piloto("Guanyu Zhou" , "Stake F1 Team" , "Número 24"));
+pilotos.push(new piloto("Valteri Bottas" , "Stake F1 Team" , "Número 77"));
+pilotos.push(new piloto("Daniel Ricciardo" , "Scuderia Alpha Tauri" , "Número 3"));
+pilotos.push(new piloto("Yuki Tsunoda" , "Scuderia Alpha Tauri" , "Número 22"));
+pilotos.push(new piloto("Logan Sargeant" , "Willliams" , "Número 2"));
+pilotos.push(new piloto("Alexander Albon" , "Williams" , "Número 23"));
+
+
+let card = document.createElement("section");
+card.classList.add("card");
+card.classList.add("col-lg-4");
+card.classList.add("col-md-6");
+card.classList.add("col-sm-12");
+let foto = document.createElement("div");
+foto.classList.add("foto");
+let info = document.createElement("ul");
+info.classList.add("info")
+
+
+
+principal.appendChild(divRowMain);
+miBody.appendChild(principal);

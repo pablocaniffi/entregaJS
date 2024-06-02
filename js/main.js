@@ -72,3 +72,18 @@ function campeonato (autoGanador) {
 
 
 campeonato(autoGanador);
+
+
+// mio y solo mio
+// <header></header>
+//     <nav></nav>
+//     <aside></aside>
+//     <main>
+//         <h1>Querés competir en la F1?</h1>
+//         <ol type="1">
+//             <li>Elige tu rival</li>
+//             <li>Elige tu piloto</li>
+//             <li>Escoge sabiamente entre las opciones disponibles para ganar.</li>
+//         </ol>
+//     </main>
+//     <footer></footer> 
