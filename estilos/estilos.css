@@ -103,7 +103,7 @@
 .pie {
   background-color: aqua;
   padding: 10px;
-  height: 250px;
+  height: auto;
 }
 .pie .foto1 {
   padding: 3px;
