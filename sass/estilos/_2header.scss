@@ -1,0 +1,18 @@
+.encabezado {
+    border: 1px solid blue;
+    background-color: map-get($colores , colorHeader );
+    height: $alturaHeader;
+    .tituloPrincipal{
+        font-family: map-get($fuentes, fuenteFaster ) , sans-serif ;
+        font-size: 40px;
+        text-align: center;
+        align-content: center;
+        color: red;
+    }
+    .logoF1 {
+        height: $alturaHeader;
+        width: auto;
+        border: red solid 5px;
+        border-radius: 10px;
+    }
+}

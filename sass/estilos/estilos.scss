@@ -1,1 +1,10 @@
-@import '_1generales';
+@import './1generales';
+
+@import '../utilidades/variables';
+@import '../utilidades/maps';
+@import '../utilidades/mixins';
+
+
+@import './2header';
+@import './3nav';
+@import './4main';

@@ -26,5 +26,77 @@
   font-family: blankspace-sketch;
   src: url(../fonts/hiromisake.ttf);
 }
+.encabezado {
+  border: 1px solid blue;
+  background-color: rgb(0, 100, 255);
+  height: 100px;
+}
+.encabezado .tituloPrincipal {
+  font-family: fasterstroker, sans-serif;
+  font-size: 40px;
+  text-align: center;
+  align-content: center;
+  color: red;
+}
+.encabezado .logoF1 {
+  height: 100px;
+  width: auto;
+  border: red solid 5px;
+  border-radius: 10px;
+}
+
+.barraNav {
+  height: 65px;
+  background-color: rgb(0, 150, 255);
+  font-family: greekfreak, sans-serif;
+  font-size: 20px;
+  color: yellow;
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+.barraNav .redes {
+  color: yellow;
+  font-size: 30px;
+}
+.barraNav .redes:hover {
+  color: red;
+}
+
+.principal {
+  background-color: rgb(0, 180, 255);
+}
+.principal .ubiH3 {
+  text-align: center;
+  height: 50px;
+}
+.principal .ubiH3 .tituloPrincipal {
+  font-family: blankspace-solid, sans-serif;
+  padding: 5px;
+  font-size: 36px;
+  color: orange;
+  align-items: center;
+}
+.principal .card {
+  border: 2px solid blue;
+  padding: 8px;
+  background-color: rgb(0, 180, 255);
+}
+.principal .card .foto .fotoPiloto {
+  border: 4px solid orange;
+  padding: 5px;
+  width: auto;
+  height: 180px;
+}
+.principal .card .info {
+  font-family: blankspace-solid, sans-serif;
+  font-size: 22px;
+  align-items: center;
+  color: orange;
+}
 
 /*# sourceMappingURL=estilos.css.map */

@@ -1,0 +1,16 @@
+.barraNav{
+    height: 65px ;
+    background-color: rgb(0, 150 , 255);
+    font-family: map-get($fuentes, fuenteGreek ) , sans-serif;
+    font-size: 20px;
+    color: yellow;
+    border: 1px solid blue;
+    @include flexbox (flex , row , wrap , space-evenly , center , center);
+    .redes{
+        color: yellow;
+        font-size: 30px;
+        &:hover{
+            color: red;
+        }
+    }
+}
