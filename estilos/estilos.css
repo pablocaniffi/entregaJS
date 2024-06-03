@@ -99,4 +99,26 @@
   color: orange;
 }
 
+.pie {
+  background-color: aqua;
+  padding: 10px;
+  height: 250px;
+}
+.pie .foto1 {
+  padding: 3px;
+  border-radius: 80px;
+  height: 160px;
+  width: auto;
+}
+.pie .comentarios {
+  font-family: sans-serif;
+  font-size: 17px;
+}
+.pie .foto2 {
+  padding: 3px;
+  border-radius: 30px;
+  height: 160px;
+  width: auto;
+}
+
 /*# sourceMappingURL=estilos.css.map */

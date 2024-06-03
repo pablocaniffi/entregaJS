@@ -151,9 +151,11 @@ divRowFooter.classList.add("row");
 footer.appendChild(divRowFooter);
 
 let imagenFooter1 = document.createElement("div");
-imagenFooter1.innerHTML = '<img class= "foto1 col-2" src="./multimedia/footerFerrari.webp" alt="logo Ferrari">';
+imagenFooter1.innerHTML = '<img class= "foto1" src="./multimedia/footerFerrari.webp" alt="logo Ferrari">';
+imagenFooter1.classList.add("col-3");
 let imagenFooter2 = document.createElement("div");
 imagenFooter2.innerHTML = '<img class= "foto2 col-3" src="./multimedia/footerRuedas.webp" alt="Neumáticos">';
+imagenFooter2.classList.add("col-3")
 let comentarios = document.querySelector(".comentarios");
 let botones = document.querySelector(".botones");
 
