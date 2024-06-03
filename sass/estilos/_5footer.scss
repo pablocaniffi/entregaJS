@@ -1,7 +1,7 @@
 .pie{
-    background-color: aqua;
+    background-color: map-get($colores, colorFooter );
     padding: 10px;
-    height: 250px;
+    height: $alturaFooter;
     .foto1{
         padding: 3px;
         border-radius: 80px;

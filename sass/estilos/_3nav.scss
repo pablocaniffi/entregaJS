@@ -1,6 +1,6 @@
 .barraNav{
-    height: 65px ;
-    background-color: rgb(0, 150 , 255);
+    height: $alturaNav ;
+    background-color: map-get($colores , colorNav );
     font-family: map-get($fuentes, fuenteGreek ) , sans-serif;
     font-size: 20px;
     color: yellow;
