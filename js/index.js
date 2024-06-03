@@ -50,11 +50,13 @@ itemsRedes.forEach((item)=>item.classList.add("redes"));
 // main
 let principal = document.createElement("main");
 principal.classList.add("principal");
-principal.classList.add("content-fluid");
+principal.classList.add("container-fluid");
 
 let divRowMain = document.createElement("div");
 divRowMain.classList.add("row");
 
+
+// Título "Pilotos"
 let h3Titulo = document.createElement("h3");
 h3Titulo.classList.add("tituloPrincipal");
 h3Titulo.classList.add("col-12");
@@ -62,7 +64,7 @@ h3Titulo.innerText = "Pilotos".toUpperCase();
 divRowMain.appendChild(h3Titulo);
 principal.appendChild(divRowMain);
 
-
+// Cards Pilotos
 function piloto (nombre , escuderia , numero) {
     this.nombre = nombre,
     this.escuderia = escuderia,
@@ -99,8 +101,7 @@ function competidor (conductor) {
         card.classList.add("col-lg-4");
         card.classList.add("col-md-6");
         card.classList.add("col-sm-12");
-        
-        console.log(pilotos[3].nombre);
+
         let foto = document.createElement("div");
         foto.classList.add("foto");
     
@@ -120,12 +121,36 @@ function competidor (conductor) {
         card.appendChild(foto);
         card.appendChild(info);
     
-        principal.appendChild(card);
+        divRowMain.appendChild(card);
     };
 };
-
 competidor(pilotos);
 
-
-
+// Simulador
 miBody.appendChild(principal);
+
+
+
+// footer
+let footer = document.createElement("footer");
+footer.classList.add("pie");
+footer.classList.add("container-fluid");
+
+let divRowFooter = document.createElement("div");
+divRowFooter.classList.add("row");
+footer.appendChild(divRowFooter);
+
+let imagenFooter1 = document.createElement("div");
+imagenFooter1.innerHTML = '<img class= "foto1 col-2" src="./multimedia/footerFerrari.webp" alt="logo Ferrari">';
+let imagenFooter2 = document.createElement("div");
+imagenFooter2.innerHTML = '<img class= "foto2 col-3" src="./multimedia/footerRuedas.webp" alt="Neumáticos">';
+let comentarios = document.querySelector(".comentarios");
+let botones = document.querySelector(".botones");
+
+divRowFooter.appendChild(imagenFooter1);
+divRowFooter.appendChild(comentarios);
+divRowFooter.appendChild(imagenFooter2);
+divRowFooter.appendChild(botones);
+
+miBody.appendChild(footer);
+// fin footer

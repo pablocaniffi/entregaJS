@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./estilos/estilos.css">
-    <link rel="shortcut icon" href="">
+    <link rel="shortcut icon" href="./multimedia/logof1.webp">
     
     <title>Simulador Interactivo</title>
 </head>
 <body>
     
+    <!-- navegador con items -->
     <nav class="encabezado col-12">
         <h2>Pilotos</h2>
         <h2>Simulador</h2>
@@ -24,6 +25,18 @@
         <a href="https://www.instagram.com/f1/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
         <a href="https://www.formula1.com/" target="_blank"><i class="fa-solid fa-car-side"></i></i></a>
     </nav>
+
+    <!-- caja de formulario bootstrap-->
+    <div class="form-floating comentarios">
+        <textarea class="form-control" placeholder="Comentarios" id="floatingTextarea2" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Caja de comentarios</label>
+    </div>
+    <!-- botones de formulario bootstrap-->
+    <div class="botones">
+        <input class="btn btn-primary" type="button" value="Input">
+        <input class="btn btn-outline-warning" type="submit" value="Submit">
+        <input class="btn btn-outline-danger" type="reset" value="Reset">
+    </div>
 
     <script src="./js/index.js"></script>
 
