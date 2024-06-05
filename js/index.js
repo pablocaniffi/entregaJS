@@ -36,6 +36,20 @@ let itemsRedes = nav.querySelectorAll("a");
 itemsNombre.forEach((item)=>item.classList.add("redes"));
 itemsRedes.forEach((item)=>item.classList.add("redes"));
 miBody.appendChild(nav);
+
+
+// dark mode
+// btnColorMode.addEventListener("click", () => {
+//     document.body.classList.toggle("dark-mode");
+//     if (document.body.classList.contains("dark-mode")) {
+        //  document.body.classList.contains("dark-mode");
+//         btnColorMode.innerText = "☀️"
+//     } else {
+//         btnColorMode.innerText = "🌙"
+        // document.body.classList.remove("dark-mode")
+//     }
+
+
 // fin nav
 
 
@@ -137,15 +151,88 @@ function competidor (conductor) {
 competidor(pilotos);
 
 // Simulador
+let btnSimulador = ["Estrategia" , "Lluvia" , "Choque"];
+let tituloSimulador = "";
+for (elemento of btnSimulador){
+    tituloSimulador =  `
+        <h4 id="${elemento}H4" class="tituloSimulador">${elemento}</h4>
+        <button id="${elemento}Suma" class="carrito" data-id="1">+</button>
+        <button id="${elemento}Resta" class="carrito" data-id="1">-</button>
+        <div id="${elemento}Resultado" class="tituloSimulador">Resutado</div>
+    `;
+    let divSimulador = document.createElement("div");
+    divSimulador.innerHTML=tituloSimulador;
+    divSimulador.classList.add("btnSimulador");
+    divRowMain.appendChild(divSimulador);
+}
 miBody.appendChild(principal);
 
+// ESTRATEGIA
+let estrategiaSuma = document.querySelector("#EstrategiaSuma");
+estrategiaSuma.addEventListener("click", sumadorES);
+console.log(estrategiaSuma)
+let contadorES = 0;
+function sumadorES() {
+    contadorES++;
+    console.log(contadorES);
+    sessionStorage.setItem("contadorES" , contadorES);
+}
+let estrategiaResta = document.querySelector("#EstrategiaResta");
+estrategiaResta.addEventListener("click", restadorER);
+console.log(estrategiaResta)
+let contadorER=0;
+function restadorER() {
+    contadorER++;
+    console.log(contadorER)
+    sessionStorage.setItem("contadorER" , contadorER);
+}
 
+// LLUVIA
+let lluviaSuma = document.querySelector("#LluviaSuma");
+lluviaSuma.addEventListener("click", sumadorLS);
+console.log(lluviaSuma)
+let contadorLS = 0;
+function sumadorLS() {
+    contadorLS++;
+    console.log(contadorLS);
+    sessionStorage.setItem("contadorLS" , contadorLS);
+}
+let lluviaResta = document.querySelector("#LluviaResta");
+lluviaResta.addEventListener("click", restadorLR);
+console.log(lluviaResta)
+let contadorLR=0;
+function restadorLR() {
+    contadorLR++;
+    console.log(contadorLR)
+    sessionStorage.setItem("contadorLR" , contadorLR);
+}
 
+// CHOQUES
+let choqueSuma = document.querySelector("#ChoqueSuma");
+choqueSuma.addEventListener("click", sumadorCS);
+console.log(choqueSuma)
+let contadorCS = 0;
+function sumadorCS() {
+    contadorCS++;
+    console.log(contadorCS);
+    sessionStorage.setItem("contadorCS" , contadorCS);
+}
+let choqueResta = document.querySelector("#ChoqueResta");
+choqueResta.addEventListener("click", restadorCR);
+console.log(choqueResta)
+let contadorCR=0;
+function restadorCR() {
+    contadorCR++;
+    console.log(contadorCR)
+    sessionStorage.setItem("contadorCR" , contadorCR);
+}
+
+    
 // footer
 let footer = document.createElement("footer");
 footer.classList.add("pie");
 footer.classList.add("container-fluid");
-
+    
 let divRowFooter = document.createElement("div");
 divRowFooter.classList.add("row");
 footer.appendChild(divRowFooter);
