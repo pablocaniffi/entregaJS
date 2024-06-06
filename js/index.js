@@ -199,56 +199,69 @@ function aceptar () {console.log(inicio)}
 
 
 // ESTRATEGIA
+let h4Est = document.createElement("h4");
+h4Est.classList.add("tituloPrincipal");
+let estRes = document.querySelector("#EstrategiaResultado");
+estRes.appendChild(h4Est);
 let estrategia=0;
 let estrategiaSuma = document.querySelector("#EstrategiaSuma");
 estrategiaSuma.addEventListener("click", sumadorES);
 function sumadorES() {
-    estrategia++;
+    estrategia++;    
     JSON.stringify(sessionStorage.setItem("estrategia" , estrategia));
+    h4Est.innerText = JSON.parse(sessionStorage.getItem("estrategia"));
 }
 let estrategiaResta = document.querySelector("#EstrategiaResta");
 estrategiaResta.addEventListener("click", restadorER);
 function restadorER() {
     estrategia--;
     JSON.stringify(sessionStorage.setItem("estrategia" , estrategia));
+    h4Est.innerText = JSON.parse(sessionStorage.getItem("estrategia"));
 }
 
 
 // LLUVIA
+let h4Llu = document.createElement("h4");
+h4Llu.classList.add("tituloPrincipal");
+let lluRes = document.querySelector("#LluviaResultado");
+lluRes.appendChild(h4Llu);
 let lluvia = 0;
 let lluviaSuma = document.querySelector("#LluviaSuma");
 lluviaSuma.addEventListener("click", sumadorLS);
 function sumadorLS() {
     lluvia++;
     JSON.stringify(sessionStorage.setItem("lluvia" , lluvia));
+    h4Llu.innerText = JSON.parse(sessionStorage.getItem("lluvia"));
 }
 let lluviaResta = document.querySelector("#LluviaResta");
 lluviaResta.addEventListener("click", restadorLR);
 function restadorLR() {
     lluvia --;
     JSON.stringify(sessionStorage.setItem("lluvia" , lluvia));
+    h4Llu.innerText = JSON.parse(sessionStorage.getItem("lluvia"));
 }
 
 // CHOQUES
+let h4Cho = document.createElement("h4");
+h4Cho.classList.add("tituloPrincipal");
+let choRes = document.querySelector("#ChoqueResultado");
+choRes.appendChild(h4Cho);
 let choque = 0;
 let choqueSuma = document.querySelector("#ChoqueSuma");
 choqueSuma.addEventListener("click", sumadorCS);
 function sumadorCS() {
     choque++;
     JSON.stringify(sessionStorage.setItem("choque" , choque));
+    h4Cho.innerText = JSON.parse(sessionStorage.getItem("choque"));
 }
 let choqueResta = document.querySelector("#ChoqueResta");
 choqueResta.addEventListener("click", restadorCR);
 function restadorCR() {
     choque--;
     JSON.stringify(sessionStorage.setItem("choque" , choque));
+    h4Cho.innerText = JSON.parse(sessionStorage.getItem("choque"));
 }
 
-let h4Est = document.createElement("h4");
-h4Est.classList.add("tituloPrincipal");
-h4Est.innerText = JSON.parse(sessionStorage.getItem("estrategia"));
-let estRes = document.querySelector("#EstrategiaResultado");
-estRes.appendChild(h4Est);
 
     
 // footer
