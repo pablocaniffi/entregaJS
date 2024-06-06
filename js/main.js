@@ -1,3 +1,5 @@
+// ARCHIVO CON LAS ENTREGAS 1 Y 2
+
 alert ("Simulador de carrera:");
 
 function competidor (piloto , escuderia , puntaje) {
