@@ -3,12 +3,13 @@
     height: $alturaMain;
     .ubiH3{
         text-align: center;
-        height: 50px;
+        height: 90px;
+        align-content: flex-end;
         .tituloPrincipal{
             font-family: map-get($fuentes, fuenteBlankSolid ) , sans-serif;
             padding: 5px;
             font-size: 36px;
-            color: orange;
+            color: red;
             align-items: center;
         }
     }
@@ -30,5 +31,20 @@
             align-items: center;
             color: orange;            
         }
+    }
+    .btnSimulador{
+        height: 200px;
+        border: 1px solid red;
+        padding: 3px;
+        .tituloSimulador{
+        font-family: map-get($fuentes, fuenteGreek ) , sans-serif;
+        padding: 5px;
+        font-size: 28px;
+        color: orange;
+        align-items: center;
+        }
+    }
+    .btn-Aceptar{
+        height: 65px;
     }
 };

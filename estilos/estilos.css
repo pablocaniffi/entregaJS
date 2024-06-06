@@ -73,13 +73,14 @@
 }
 .principal .ubiH3 {
   text-align: center;
-  height: 50px;
+  height: 90px;
+  align-content: flex-end;
 }
 .principal .ubiH3 .tituloPrincipal {
   font-family: blankspace-solid, sans-serif;
   padding: 5px;
   font-size: 36px;
-  color: orange;
+  color: red;
   align-items: center;
 }
 .principal .card {
@@ -98,6 +99,21 @@
   font-size: 22px;
   align-items: center;
   color: orange;
+}
+.principal .btnSimulador {
+  height: 200px;
+  border: 1px solid red;
+  padding: 3px;
+}
+.principal .btnSimulador .tituloSimulador {
+  font-family: greekfreak, sans-serif;
+  padding: 5px;
+  font-size: 28px;
+  color: orange;
+  align-items: center;
+}
+.principal .btn-Aceptar {
+  height: 65px;
 }
 
 .pie {

@@ -141,7 +141,7 @@ function competidor (conductor) {
         info.appendChild(infoNombre);
         info.appendChild(infoEscuderia);
         info.appendChild(infoNumero);
-    
+        
         card.appendChild(foto);
         card.appendChild(info);
     
@@ -151,14 +151,25 @@ function competidor (conductor) {
 competidor(pilotos);
 
 // Simulador
+
+let incioSimulador = document.createElement("div");
+incioSimulador.classList.add("ubiH3");
+incioSimulador.classList.add("align-self-end");
+let h3Simulador = document.createElement("h3");
+h3Simulador.classList.add("tituloPrincipal")
+h3Simulador.classList.add("col-5");
+h3Simulador.innerText = "Simulador".toUpperCase();
+incioSimulador.appendChild(h3Simulador);
+divRowMain.appendChild(incioSimulador);
+
 let btnSimulador = ["Estrategia" , "Lluvia" , "Choque"];
 let tituloSimulador = "";
 for (elemento of btnSimulador){
     tituloSimulador =  `
         <h4 id="${elemento}H4" class="tituloSimulador">${elemento}</h4>
-        <button id="${elemento}Suma" class="carrito" data-id="1">+</button>
-        <button id="${elemento}Resta" class="carrito" data-id="1">-</button>
-        <div id="${elemento}Resultado" class="tituloSimulador">Resutado</div>
+        <button id="${elemento}Suma" class="carrito btn btn-outline-warning" data-id="1">+</button>
+        <button id="${elemento}Resta" class="carrito btn btn-outline-warning" data-id="1">-</button>
+        <div id="${elemento}Resultado" class="tituloSimulador">Resultado: </div>
     `;
     let divSimulador = document.createElement("div");
     divSimulador.innerHTML=tituloSimulador;
@@ -167,65 +178,77 @@ for (elemento of btnSimulador){
 }
 miBody.appendChild(principal);
 
+let divBtnAceptar =document.createElement("div");
+divBtnAceptar.classList.add("col-12");
+divBtnAceptar.classList.add("text-center");
+divBtnAceptar.classList.add("btn-Aceptar");
+
+let btnAceptar = document.createElement("button");
+btnAceptar.classList.add("btn");
+btnAceptar.classList.add("btn-primary");
+btnAceptar.classList.add("col-3");
+
+btnAceptar.innerText="ACEPTAR";
+divBtnAceptar.appendChild(btnAceptar);
+divRowMain.appendChild(divBtnAceptar);
+
+let inicio =0;
+btnAceptar.addEventListener("click" , aceptar);
+function aceptar () {console.log(inicio)}
+
+
+
 // ESTRATEGIA
+let estrategia=0;
 let estrategiaSuma = document.querySelector("#EstrategiaSuma");
 estrategiaSuma.addEventListener("click", sumadorES);
-console.log(estrategiaSuma)
-let contadorES = 0;
 function sumadorES() {
-    contadorES++;
-    console.log(contadorES);
-    sessionStorage.setItem("contadorES" , contadorES);
+    estrategia++;
+    JSON.stringify(sessionStorage.setItem("estrategia" , estrategia));
 }
 let estrategiaResta = document.querySelector("#EstrategiaResta");
 estrategiaResta.addEventListener("click", restadorER);
-console.log(estrategiaResta)
-let contadorER=0;
 function restadorER() {
-    contadorER++;
-    console.log(contadorER)
-    sessionStorage.setItem("contadorER" , contadorER);
+    estrategia--;
+    JSON.stringify(sessionStorage.setItem("estrategia" , estrategia));
 }
 
+
 // LLUVIA
+let lluvia = 0;
 let lluviaSuma = document.querySelector("#LluviaSuma");
 lluviaSuma.addEventListener("click", sumadorLS);
-console.log(lluviaSuma)
-let contadorLS = 0;
 function sumadorLS() {
-    contadorLS++;
-    console.log(contadorLS);
-    sessionStorage.setItem("contadorLS" , contadorLS);
+    lluvia++;
+    JSON.stringify(sessionStorage.setItem("lluvia" , lluvia));
 }
 let lluviaResta = document.querySelector("#LluviaResta");
 lluviaResta.addEventListener("click", restadorLR);
-console.log(lluviaResta)
-let contadorLR=0;
 function restadorLR() {
-    contadorLR++;
-    console.log(contadorLR)
-    sessionStorage.setItem("contadorLR" , contadorLR);
+    lluvia --;
+    JSON.stringify(sessionStorage.setItem("lluvia" , lluvia));
 }
 
 // CHOQUES
+let choque = 0;
 let choqueSuma = document.querySelector("#ChoqueSuma");
 choqueSuma.addEventListener("click", sumadorCS);
-console.log(choqueSuma)
-let contadorCS = 0;
 function sumadorCS() {
-    contadorCS++;
-    console.log(contadorCS);
-    sessionStorage.setItem("contadorCS" , contadorCS);
+    choque++;
+    JSON.stringify(sessionStorage.setItem("choque" , choque));
 }
 let choqueResta = document.querySelector("#ChoqueResta");
 choqueResta.addEventListener("click", restadorCR);
-console.log(choqueResta)
-let contadorCR=0;
 function restadorCR() {
-    contadorCR++;
-    console.log(contadorCR)
-    sessionStorage.setItem("contadorCR" , contadorCR);
+    choque--;
+    JSON.stringify(sessionStorage.setItem("choque" , choque));
 }
+
+let h4Est = document.createElement("h4");
+h4Est.classList.add("tituloPrincipal");
+h4Est.innerText = JSON.parse(sessionStorage.getItem("estrategia"));
+let estRes = document.querySelector("#EstrategiaResultado");
+estRes.appendChild(h4Est);
 
     
 // footer
