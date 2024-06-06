@@ -198,9 +198,6 @@ btnAceptar.innerText="ACEPTAR";
 divBtnAceptar.appendChild(btnAceptar);
 divRowMain.appendChild(divBtnAceptar);
 
-let inicio =0;
-btnAceptar.addEventListener("click" , aceptar);
-function aceptar () {console.log(inicio)}
 
 
 
@@ -268,8 +265,25 @@ function restadorCR() {
     h4Cho.innerText = JSON.parse(sessionStorage.getItem("choque"));
 }
 
+function carrera (nombre , valor) {
+    this.nombre = nombre,
+    this.valor =valor
+};
+let j=0;
+let valor = [9 , 10 , 13 , 8, 19 , 18 , 6 , 2 , 17 , 15 , 12 , 14 , 20 , 16 , 4 , 7 , 5 , 11 , 1 , 3];
+let pilotosCarrera = [];
+for (j=0 ; j<valor.length ;j++){
+    pilotosCarrera.push(new carrera(pilotos[j].nombre , valor[j]))
+}
+console.log(pilotosCarrera)
 
-    
+
+
+
+let inicio =0;
+btnAceptar.addEventListener("click" , aceptar);
+function aceptar () {console.log(inicio)}
+
 // footer
 let footer = document.createElement("footer");
 footer.classList.add("pie");
