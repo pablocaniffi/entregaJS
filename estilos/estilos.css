@@ -119,7 +119,10 @@
   align-items: center;
 }
 .principal .btn-Aceptar {
-  height: 65px;
+  height: 80px;
+}
+.principal .btn-Eliminar {
+  height: 80px;
 }
 
 .pie {

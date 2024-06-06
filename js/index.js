@@ -53,13 +53,11 @@ miBody.appendChild(nav);
 // fin nav
 
 
-
 // aside (puro SASS)
 let lateral = document.createElement("aside");
 lateral.classList.add("lateral");
 miBody.appendChild(lateral);
 // fin aside
-
 
 
 // main
@@ -185,7 +183,7 @@ for (elemento of btnSimulador){
 miBody.appendChild(principal);
 
 let divBtnAceptar =document.createElement("div");
-divBtnAceptar.classList.add("col-12");
+divBtnAceptar.classList.add("col-6");
 divBtnAceptar.classList.add("text-center");
 divBtnAceptar.classList.add("btn-Aceptar");
 
@@ -197,6 +195,20 @@ btnAceptar.classList.add("col-3");
 btnAceptar.innerText="ACEPTAR";
 divBtnAceptar.appendChild(btnAceptar);
 divRowMain.appendChild(divBtnAceptar);
+
+let divBtnEliminar =document.createElement("div");
+divBtnEliminar.classList.add("col-6");
+divBtnEliminar.classList.add("text-center");
+divBtnEliminar.classList.add("btn-Eliminar");
+
+let btnEliminar = document.createElement("button");
+btnEliminar.classList.add("btn");
+btnEliminar.classList.add("btn-danger");
+btnEliminar.classList.add("col-3");
+
+btnEliminar.innerText="ELIMINAR TABLAS";
+divBtnEliminar.appendChild(btnEliminar);
+divRowMain.appendChild(divBtnEliminar);
 
 
 
@@ -274,15 +286,62 @@ let valor = [9 , 10 , 13 , 8, 19 , 18 , 6 , 2 , 17 , 15 , 12 , 14 , 20 , 16 , 4 
 let pilotosCarrera = [];
 for (j=0 ; j<valor.length ;j++){
     pilotosCarrera.push(new carrera(pilotos[j].nombre , valor[j]))
+};
+pilotosCarrera.sort( (a , b) => (a.valor<b.valor ? 1 : -1));
+
+function aceptar () {
+let h=0;
+for (h=0 ; h<7 ; h++){
+    pilotosCarrera[h].valor= (pilotosCarrera[h].valor+((JSON.parse(sessionStorage.getItem("estrategia"))))-((JSON.parse(sessionStorage.getItem("lluvia")))));
+};
+for (h=7 ; h<11 ; h++){
+    pilotosCarrera[h].valor= (pilotosCarrera[h].valor+((JSON.parse(sessionStorage.getItem("estrategia"))))-((JSON.parse(sessionStorage.getItem("lluvia")))*0.5))/((JSON.parse(sessionStorage.getItem("choque")))+1);
+};
+// for (h=11 ; h<21 ; h++){
+//     pilotosCarrera[h].valor= (pilotosCarrera[h].valor-(JSON.parse(sessionStorage.getItem("lluvia"))))/((JSON.parse(sessionStorage.getItem("choque")))+0.5);
+// };
+
+pilotosCarrera.sort( (a , b) => (a.valor<b.valor ? 1 : -1));
+let conductoresOrdenados = pilotosCarrera.map( piloto => piloto.nombre);
+
+
+tabla = document.createElement("table");
+
+function tablaConductores (conductores) {
+    tabla.classList.add("table");
+    let tr = document.createElement("tr");  
+    let th = document.createElement("th");
+    th.setAttribute("scope" , "row");
+    th.innerText="Posición";
+    let td = document.createElement("td");
+    td.innerText="Piloto";
+    td.setAttribute("scope" , "row");
+    tabla.appendChild(tr);
+    tr.appendChild(th);
+    tr.appendChild(td);
+    for (j=0 ; j<conductores.length ; j++){
+        let trCond = document.createElement("tr");  
+        let thCond = document.createElement("th");
+        thCond.innerText=j+1;
+        let tdCond = document.createElement("td");
+        tdCond.innerText=conductores[j];
+        trCond.appendChild(thCond);
+        trCond.appendChild(tdCond);
+        tabla.appendChild(trCond);
+    };
 }
-console.log(pilotosCarrera)
+tablaConductores(conductoresOrdenados);
 
+divRowMain.appendChild(tabla);
+};
 
+function eliminar (){
+    let eliminados = document.querySelector(".table");
+    eliminados.parentNode.removeChild(eliminados);
+};   
 
-
-let inicio =0;
 btnAceptar.addEventListener("click" , aceptar);
-function aceptar () {console.log(inicio)}
+btnEliminar.addEventListener("click" , eliminar);
 
 // footer
 let footer = document.createElement("footer");
