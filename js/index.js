@@ -162,6 +162,12 @@ h3Simulador.innerText = "Simulador".toUpperCase();
 incioSimulador.appendChild(h3Simulador);
 divRowMain.appendChild(incioSimulador);
 
+let parrafoSimulador = document.createElement("p");
+parrafoSimulador.classList.add("parrafoSimulador");
+parrafoSimulador.innerText = "Indica que tan estrategas son los pilotos, la probabilidad de tiempo de lluvia, y las chances de que choquen en cada vuelta.";
+divRowMain.appendChild(parrafoSimulador);
+
+
 let btnSimulador = ["Estrategia" , "Lluvia" , "Choque"];
 let tituloSimulador = "";
 for (elemento of btnSimulador){
@@ -207,14 +213,14 @@ let estrategia=0;
 let estrategiaSuma = document.querySelector("#EstrategiaSuma");
 estrategiaSuma.addEventListener("click", sumadorES);
 function sumadorES() {
-    estrategia++;    
+    estrategia <10 ? estrategia++ : estrategia=10;    
     JSON.stringify(sessionStorage.setItem("estrategia" , estrategia));
     h4Est.innerText = JSON.parse(sessionStorage.getItem("estrategia"));
 }
 let estrategiaResta = document.querySelector("#EstrategiaResta");
 estrategiaResta.addEventListener("click", restadorER);
 function restadorER() {
-    estrategia--;
+    estrategia<1 ? estrategia=0 : estrategia--;
     JSON.stringify(sessionStorage.setItem("estrategia" , estrategia));
     h4Est.innerText = JSON.parse(sessionStorage.getItem("estrategia"));
 }
@@ -229,14 +235,14 @@ let lluvia = 0;
 let lluviaSuma = document.querySelector("#LluviaSuma");
 lluviaSuma.addEventListener("click", sumadorLS);
 function sumadorLS() {
-    lluvia++;
+    lluvia <10 ? lluvia++ : lluvia=10;
     JSON.stringify(sessionStorage.setItem("lluvia" , lluvia));
     h4Llu.innerText = JSON.parse(sessionStorage.getItem("lluvia"));
 }
 let lluviaResta = document.querySelector("#LluviaResta");
 lluviaResta.addEventListener("click", restadorLR);
 function restadorLR() {
-    lluvia --;
+    lluvia<1 ? lluvia=0 : lluvia --;
     JSON.stringify(sessionStorage.setItem("lluvia" , lluvia));
     h4Llu.innerText = JSON.parse(sessionStorage.getItem("lluvia"));
 }
@@ -250,14 +256,14 @@ let choque = 0;
 let choqueSuma = document.querySelector("#ChoqueSuma");
 choqueSuma.addEventListener("click", sumadorCS);
 function sumadorCS() {
-    choque++;
+    choque<10? choque++ : choque=10;
     JSON.stringify(sessionStorage.setItem("choque" , choque));
     h4Cho.innerText = JSON.parse(sessionStorage.getItem("choque"));
 }
 let choqueResta = document.querySelector("#ChoqueResta");
 choqueResta.addEventListener("click", restadorCR);
 function restadorCR() {
-    choque--;
+    choque<1 ? choque =0 : choque--;
     JSON.stringify(sessionStorage.setItem("choque" , choque));
     h4Cho.innerText = JSON.parse(sessionStorage.getItem("choque"));
 }
