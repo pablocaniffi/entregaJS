@@ -69,15 +69,15 @@ function campeonato (autoGanador) {
     
     }
     while (control === "S");
-            
+    
 };   
 
 
 campeonato(autoGanador);
 
 
-// mio y solo mio
-// <header></header>
+// instrucciones entrega 2:
+//     <header></header>
 //     <nav></nav>
 //     <aside></aside>
 //     <main>
@@ -89,3 +89,8 @@ campeonato(autoGanador);
 //         </ol>
 //     </main>
 //     <footer></footer> 
+
+// cosas a hacer
+// scroll hasta cada item de pilotos-simulador-escuderías-footer
+// hacer fetch con async-await con las escuderías.
+// ver si vale la pena el dark-mode

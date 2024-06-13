@@ -297,12 +297,23 @@ for (h=0 ; h<7 ; h++){
 for (h=7 ; h<11 ; h++){
     pilotosCarrera[h].valor= (pilotosCarrera[h].valor+((JSON.parse(sessionStorage.getItem("estrategia"))))-((JSON.parse(sessionStorage.getItem("lluvia")))*0.5))/((JSON.parse(sessionStorage.getItem("choque")))+1);
 };
-// for (h=11 ; h<21 ; h++){
-//     pilotosCarrera[h].valor= (pilotosCarrera[h].valor-(JSON.parse(sessionStorage.getItem("lluvia"))))/((JSON.parse(sessionStorage.getItem("choque")))+0.5);
-// };
+
+for (h=11 ; h<pilotosCarrera.length ; h++){
+    pilotosCarrera[h].valor= (pilotosCarrera[h].valor+((JSON.parse(sessionStorage.getItem("estrategia"))))-((JSON.parse(sessionStorage.getItem("lluvia")))))/((JSON.parse(sessionStorage.getItem("choque")))+0.1);
+};
+
+pilotosCarrera.forEach((numero)=>numero.valor*Math.random()*JSON.parse(sessionStorage.getItem("choque")));
 
 pilotosCarrera.sort( (a , b) => (a.valor<b.valor ? 1 : -1));
 let conductoresOrdenados = pilotosCarrera.map( piloto => piloto.nombre);
+
+Swal.fire({
+    position: "top-end",
+    icon: "info",
+    title: "El ganador es " + pilotosCarrera[0].nombre,
+    showConfirmButton: false,
+    timer: 3800
+  });
 
 
 tabla = document.createElement("table");
