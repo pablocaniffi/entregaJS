@@ -1,52 +1,52 @@
 [
     {
         "nombre":"Alpine",
-        "logo": "./multimedia/logos/logo-alpine.png",
-        "auto": "./multimedia/autos/auto-alpine.png"
+        "logo": "../multimedia/json/logos/logo-alpine.png",
+        "auto": "../multimedia/json/autos/auto-alpine.png"
     },
     {
         "nombre":"Aston Martin",
-        "logo": "./multimedia/logos/logo-astonmartin.png",
-        "auto": "./multimedia/autos/auto-astonmartin.png"
+        "logo": "../multimedia/json/logos/logo-astonmartin.png",
+        "auto": "../multimedia/json/autos/auto-astonmartin.png"
     },
     {
         "nombre":"Mercedes",
-        "logo": "./multimedia/logos/logo-mercedes.png",
-        "auto": "./multimedia/autos/auto-mercedes.png"
+        "logo": "../multimedia/json/logos/logo-mercedes.png",
+        "auto": "../multimedia/json/autos/auto-mercedes.png"
     },
     {
         "nombre":"McLaren",
-        "logo": "./multimedia/logos/logo-mclaren.png",
-        "auto": "./multimedia/autos/auto-mclaren.png"
+        "logo": "../multimedia/json/logos/logo-mclaren.png",
+        "auto": "../multimedia/json/autos/auto-mclaren.png"
     },
     {
         "nombre":"Red Bull Racing",
-        "logo": "./multimedia/logos/logo-redbull.png",
-        "auto": "./multimedia/autos/auto-redbull.png"
+        "logo": "../multimedia/json/logos/logo-redbull.png",
+        "auto": "../multimedia/json/autos/auto-redbull.png"
     },
     {
         "nombre":"Ferrari",
-        "logo": "./multimedia/logos/logo-ferrari.png",
-        "auto": "./multimedia/autos/auto-ferrari.png"
+        "logo": "../multimedia/json/logos/logo-ferrari.png",
+        "auto": "../multimedia/json/autos/auto-ferrari.png"
     },
     {
         "nombre":"Toro Rosso",
-        "logo": "./multimedia/logos/logo-tororosso.png",
-        "auto": "./multimedia/autos/auto-tororosso.png"
+        "logo": "../multimedia/json/logos/logo-tororosso.png",
+        "auto": "../multimedia/json/autos/auto-tororosso.png"
     },
     {
         "nombre":"Stake F1 Team",
-        "logo": "./multimedia/logos/logo-stakef1team.jpeg",
-        "auto": "./multimedia/autos/auto-stakef1team.png"
+        "logo": "../multimedia/json/logos/logo-stakef1team.jpeg",
+        "auto": "../multimedia/json/autos/auto-stakef1team.png"
     },
     {
         "nombre":"HAAS",
-        "logo": "./multimedia/logos/logo-haas.png",
-        "auto": "./multimedia/autos/auto-haas.png"
+        "logo": "../multimedia/json/logos/logo-haas.png",
+        "auto": "../multimedia/json/autos/auto-haas.png"
     },
     {
         "nombre":"Williams",
-        "logo": "./multimedia/logos/logo-williams.png",
-        "auto": "./multimedia/autos/auto-williams.png"
+        "logo": "../multimedia/json/logos/logo-williams.png",
+        "auto": "../multimedia/json/autos/auto-williams.png"
     }    
 ]

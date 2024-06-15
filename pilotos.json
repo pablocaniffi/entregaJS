@@ -1,0 +1,143 @@
+[
+    {
+        "nombre": "Esteban Ocon",
+        "escuderia": "Alpine",
+        "numero": "Número 31",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/1esteban-ocon.webp' alt='Ocon'>",
+        "valor": "9"
+    },
+    {
+        "nombre": "Pierre Gasly",
+        "escuderia": "Alpine",
+        "numero": "Número 10",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/1pierre-gasly.webp' alt='Gasly'>",
+        "valor": "10"
+    },
+    {
+        "nombre": "Fernando Alonso",
+        "escuderia": "Aston Martin",
+        "numero": "Número 14",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/2fernando-alonso.webp' alt='Alonso'>",
+        "valor": "13"
+    },
+    {
+        "nombre": "Lance Stroll",
+        "escuderia": "Aston Martin",
+        "numero": "Número 18",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/2lance-stroll.webp' alt='Stroll'>",
+        "valor": "8"
+        },
+    {
+        "nombre": "Charles Leclerc",
+        "escuderia": "Ferrari",
+        "numero": "Número 16",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/3charles-leclerc.webp' alt='Leclerc'>",
+        "valor": "19"
+    },
+    {
+        "nombre": "Carlos Sainz",
+        "escuderia": "Ferrari",
+        "numero": "Número 55",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/3carlos-sainz.webp' alt='Sainz'>",
+        "valor": "18"
+    },
+    {
+        "nombre": "Kevin Magnussen",
+        "escuderia": "HAAS F1 Team",
+        "numero": "Número 20",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/4kevin-magnussen.webp' alt='Magnussen'>",
+        "valor": "6"
+        },
+    {
+        "nombre": "Nico Hulkenberg",
+        "escuderia": "HAAS F1 Team",
+        "numero": "Número 27",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/4nico-hulkenberg.webp' alt='Hulkenberg'>",
+        "valor": "2"
+    },
+    {
+        "nombre": "Lando Norris",
+        "escuderia": "McLaren F1",
+        "numero": "Número 4",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/5lando-norris.webp' alt='Norris'>",
+        "valor": "17"
+    },
+    {
+        "nombre": "Oscar Piastri",
+        "escuderia": "McLaren F1",
+        "numero": "Número 81",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/5oscar-piastri.webp' alt='Piastri'>",
+        "valor": "15"
+    },
+    {
+        "nombre": "Lewis Hamilton",
+        "escuderia": "Mercedes",
+        "numero": "Número 44",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/6lewis-hamilton.webp' alt='Hamilton'>",
+        "valor": "12"
+    },
+    {
+        "nombre": "George Russell",
+        "escuderia": "Mercedes",
+        "numero": "Número 63",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/6george-russell.webp' alt='Russell'>",
+        "valor": "14"
+    },
+    {
+        "nombre": "Max Verstappen",
+        "escuderia": "Red Bull Racing",
+        "numero": "Número 1",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/7max-verstappen.webp' alt='Verstappen'>",
+        "valor": "20"
+        },
+    {
+        "nombre": "Sergio Pérez",
+        "escuderia": "Red Bull Racing",
+        "numero": "Número 11",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/7sergio-perez.webp' alt='Pérez'>",
+        "valor": "16"
+    },
+    {
+        "nombre": "Guanyu Zhou",
+        "escuderia": "Stake F1 Team",
+        "numero": "Número 24",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/8guanyu-zhou.webp' alt='Zhou'>",
+        "valor": "4"
+    },
+    {
+        "nombre": "Valteri Bottas",
+        "escuderia": "Stake F1 Team",
+        "numero": "Número 77",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/8valtteri-bottas.webp' alt='Bottas'>",
+        "valor": "7"
+    },
+    {
+        "nombre": "Daniel Ricciardo",
+        "escuderia": "Scuderia Alpha Tauri",
+        "numero": "Número 3",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/9ricciardo.webp' alt='Ricciardo'>",
+        "valor": "5"
+    },
+    {
+        "nombre": "Yuki Tsunoda",
+        "escuderia": "Scuderia Alpha Tauri",
+        "numero": "Número 22",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/9yuki-tsunoda.webp' alt='Tsunoda'>",
+        "valor": "11"
+    },
+    {
+        "nombre": "Logan Sargeant",
+        "escuderia": "Willliams",
+        "numero": "Número 2",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/10logan-sargeant.webp' alt='Sargeant'>",
+        "valor": "1"
+    },
+    {
+        "nombre": "Alexander Albon",
+        "escuderia": "Williams",
+        "numero": "Número 23",
+        "imagen": "<img class='fotoPiloto' src='../multimedia/10alexander-albon.webp' alt='Albon'>",
+        "valor": "3"
+    }
+]
+

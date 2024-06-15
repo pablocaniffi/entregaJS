@@ -100,7 +100,7 @@
   align-items: center;
   color: orange;
 }
-.principal .parrafoSimulador {
+.principal .parrafoMain {
   padding: 5px;
   font-size: 25px;
   font-family: sans-serif;
@@ -123,6 +123,10 @@
 }
 .principal .btn-Eliminar {
   height: 80px;
+}
+.principal .btnEsc {
+  height: auto;
+  width: auto;
 }
 
 .pie {

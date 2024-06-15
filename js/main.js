@@ -94,3 +94,14 @@ campeonato(autoGanador);
 // scroll hasta cada item de pilotos-simulador-escuderías-footer
 // hacer fetch con async-await con las escuderías.
 // ver si vale la pena el dark-mode
+
+// dark mode
+// btnColorMode.addEventListener("click", () => {
+//     document.body.classList.toggle("dark-mode");
+//     if (document.body.classList.contains("dark-mode")) {
+        //  document.body.classList.contains("dark-mode");
+//         btnColorMode.innerText = "☀️"
+//     } else {
+//         btnColorMode.innerText = "🌙"
+        // document.body.classList.remove("dark-mode")
+//     }

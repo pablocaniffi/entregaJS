@@ -32,7 +32,7 @@
             color: orange;            
         }
     }
-    .parrafoSimulador{
+    .parrafoMain{
         padding: 5px;
         font-size: 25px;
         font-family: sans-serif;
@@ -55,5 +55,9 @@
     }
     .btn-Eliminar{
         height: 80px;
+    }
+    .btnEsc{
+        height: auto;
+        width: auto;
     }
 };
