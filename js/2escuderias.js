@@ -10,6 +10,7 @@ let h3TituloEsc = document.createElement("h3");
 h3TituloEsc.classList.add("tituloPrincipal");
 h3TituloEsc.classList.add("col-5");
 h3TituloEsc.innerText = "Escuderías".toUpperCase();
+h3TituloEsc.setAttribute("id","Escuderias")
 escuderiasH3.appendChild(h3TituloEsc);
 divRowMainEscuderias.appendChild(escuderiasH3);
 

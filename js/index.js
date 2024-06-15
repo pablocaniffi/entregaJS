@@ -31,9 +31,7 @@ divRowHeader.appendChild(h1Titulo);
 
 // nav
 let nav = document.querySelector(".barraNav");
-let itemsNombre = nav.querySelectorAll("h2");
 let itemsRedes = nav.querySelectorAll("a");
-itemsNombre.forEach((item)=>item.classList.add("redes"));
 itemsRedes.forEach((item)=>item.classList.add("redes"));
 miBody.appendChild(nav);
 // fin nav

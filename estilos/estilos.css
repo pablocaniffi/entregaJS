@@ -62,6 +62,7 @@
 .barraNav .redes {
   color: yellow;
   font-size: 30px;
+  text-decoration: none;
 }
 .barraNav .redes:hover {
   color: red;

@@ -1,9 +1,9 @@
 // PILOTOS
 
-// Título "Pilotos"
-
 let divRowMainPilotos = document.getElementById("dRM");
 
+
+// Título "Pilotos"
 let contenedorH3 = document.createElement("div");
 contenedorH3.classList.add("ubiH3");
 contenedorH3.classList.add("col-12");
@@ -11,6 +11,7 @@ let h3Titulo = document.createElement("h3");
 h3Titulo.classList.add("tituloPrincipal");
 h3Titulo.classList.add("col-5");
 h3Titulo.innerText = "Pilotos".toUpperCase();
+h3Titulo.setAttribute("id" , "Pilotos");
 contenedorH3.appendChild(h3Titulo);
 divRowMainPilotos.appendChild(contenedorH3);
 

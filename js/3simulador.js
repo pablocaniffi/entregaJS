@@ -9,6 +9,7 @@ let h3Simulador = document.createElement("h3");
 h3Simulador.classList.add("tituloPrincipal")
 h3Simulador.classList.add("col-5");
 h3Simulador.innerText = "Simulador".toUpperCase();
+h3Simulador.setAttribute("id","Simulador")
 incioSimulador.appendChild(h3Simulador);
 divRowMainSimulador.appendChild(incioSimulador);
 
