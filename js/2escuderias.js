@@ -26,7 +26,7 @@ let seccionBotonesEsc = document.createElement("section");
 seccionBotonesEsc.classList.add("row");
 divRowMainEscuderias.appendChild(seccionBotonesEsc);
 let escuderia = async () => {
-    let rtaEsc = await fetch("../escuderias.json");
+    let rtaEsc = await fetch("../2escuderias.json");
     let datos = await rtaEsc.json();
     let data = await datos;
     for (item of data){

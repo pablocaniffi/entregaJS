@@ -1,3 +1,8 @@
+
+// cosas a hacer
+// ver si vale la pena el dark-mode
+// consumir api x fuera
+
 // ARCHIVO CON LAS ENTREGAS 1 Y 2
 
 alert ("Simulador de carrera:");
@@ -90,10 +95,6 @@ campeonato(autoGanador);
 //     </main>
 //     <footer></footer> 
 
-// cosas a hacer
-// scroll hasta cada item de pilotos-simulador-escuderías-footer
-// hacer fetch con async-await con las escuderías.
-// ver si vale la pena el dark-mode
 
 // dark mode
 // btnColorMode.addEventListener("click", () => {

@@ -133,12 +133,14 @@ function carrera (nombre , valor) {
     this.nombre = nombre,
     this.valor =valor
 };
+console.log(pilotos)
 let j=0;
 let valor = [9 , 10 , 13 , 8, 19 , 18 , 6 , 2 , 17 , 15 , 12 , 14 , 20 , 16 , 4 , 7 , 5 , 11 , 1 , 3];
 let pilotosCarrera = [];
 for (j=0 ; j<valor.length ;j++){
     pilotosCarrera.push(new carrera(pilotos[j].nombre , valor[j]))
 };
+console.log(pilotosCarrera)
 pilotosCarrera.sort( (a , b) => (a.valor<b.valor ? 1 : -1));
 
 function aceptar () {
