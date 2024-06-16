@@ -133,71 +133,77 @@ function carrera (nombre , valor) {
     this.nombre = nombre,
     this.valor =valor
 };
-console.log(pilotos)
-let j=0;
-let valor = [9 , 10 , 13 , 8, 19 , 18 , 6 , 2 , 17 , 15 , 12 , 14 , 20 , 16 , 4 , 7 , 5 , 11 , 1 , 3];
-let pilotosCarrera = [];
-for (j=0 ; j<valor.length ;j++){
-    pilotosCarrera.push(new carrera(pilotos[j].nombre , valor[j]))
-};
-console.log(pilotosCarrera)
-pilotosCarrera.sort( (a , b) => (a.valor<b.valor ? 1 : -1));
 
-function aceptar () {
-let h=0;
-for (h=0 ; h<7 ; h++){
-    pilotosCarrera[h].valor= (pilotosCarrera[h].valor+((JSON.parse(sessionStorage.getItem("estrategia"))))-((JSON.parse(sessionStorage.getItem("lluvia")))));
-};
-for (h=7 ; h<11 ; h++){
-    pilotosCarrera[h].valor= (pilotosCarrera[h].valor+((JSON.parse(sessionStorage.getItem("estrategia"))))-((JSON.parse(sessionStorage.getItem("lluvia")))*0.5))/((JSON.parse(sessionStorage.getItem("choque")))+1);
-};
+let simuladorPiloto = async()=> {
+    let rtaSimuladorPiloto = await fetch ("../1pilotos.json");
+    let datos = await rtaSimuladorPiloto.json();
+    let data = await datos;
 
-for (h=11 ; h<pilotosCarrera.length ; h++){
-    pilotosCarrera[h].valor= (pilotosCarrera[h].valor+((JSON.parse(sessionStorage.getItem("estrategia"))))-((JSON.parse(sessionStorage.getItem("lluvia")))))/((JSON.parse(sessionStorage.getItem("choque")))+0.1);
-};
-
-pilotosCarrera.forEach((numero)=>numero.valor*Math.random()*JSON.parse(sessionStorage.getItem("choque")));
-
-pilotosCarrera.sort( (a , b) => (a.valor<b.valor ? 1 : -1));
-let conductoresOrdenados = pilotosCarrera.map( piloto => piloto.nombre);
-
-Swal.fire({
-    position: "top-end",
-    icon: "info",
-    title: "El ganador es " + pilotosCarrera[0].nombre,
-    showConfirmButton: false,
-    timer: 3800
-  });
-
-
-tabla = document.createElement("table");
-
-function tablaConductores (conductores) {
-    tabla.classList.add("table");
-    let tr = document.createElement("tr");  
-    let th = document.createElement("th");
-    th.setAttribute("scope" , "row");
-    th.innerText="Posición";
-    let td = document.createElement("td");
-    td.innerText="Piloto";
-    td.setAttribute("scope" , "row");
-    tabla.appendChild(tr);
-    tr.appendChild(th);
-    tr.appendChild(td);
-    for (j=0 ; j<conductores.length ; j++){
-        let trCond = document.createElement("tr");  
-        let thCond = document.createElement("th");
-        thCond.innerText=j+1;
-        let tdCond = document.createElement("td");
-        tdCond.innerText=conductores[j];
-        trCond.appendChild(thCond);
-        trCond.appendChild(tdCond);
-        tabla.appendChild(trCond);
+    let pilotosCarrera = [];
+    for (item of data) {
+        pilotosCarrera.push(new carrera(item.nombre , item.valor))
     };
-}
-tablaConductores(conductoresOrdenados);
 
-divRowMainSimulador.appendChild(tabla);
+    let i=0; 
+
+    console.log(pilotosCarrera);
+    pilotosCarrera.sort( (a , b) => (a.valor<b.valor ? 1 : -1));
+    
+      
+    let h=0;
+    for (h=0 ; h<7 ; h++){
+        pilotosCarrera[h].valor= (pilotosCarrera[h].valor+((JSON.parse(sessionStorage.getItem("estrategia"))))-((JSON.parse(sessionStorage.getItem("lluvia")))));
+    };
+    for (h=7 ; h<11 ; h++){
+        pilotosCarrera[h].valor= (pilotosCarrera[h].valor+((JSON.parse(sessionStorage.getItem("estrategia"))))-((JSON.parse(sessionStorage.getItem("lluvia")))*0.5))/((JSON.parse(sessionStorage.getItem("choque")))+1);
+    };
+    
+    for (h=11 ; h<pilotosCarrera.length ; h++){
+        pilotosCarrera[h].valor= (pilotosCarrera[h].valor+((JSON.parse(sessionStorage.getItem("estrategia"))))-((JSON.parse(sessionStorage.getItem("lluvia")))))/((JSON.parse(sessionStorage.getItem("choque")))+0.1);
+    
+    
+    };
+    pilotosCarrera.forEach((numero)=>numero.valor*Math.random()*JSON.parse(sessionStorage.getItem("choque")));
+    
+    pilotosCarrera.sort( (a , b) => (a.valor<b.valor ? 1 : -1));
+    let conductoresOrdenados = pilotosCarrera.map( piloto => piloto.nombre);
+    
+    Swal.fire({
+        position: "top-end",
+        icon: "info",
+        title: "El ganador es " + pilotosCarrera[0].nombre,
+        showConfirmButton: false,
+        timer: 3800
+    });
+    
+    tabla = document.createElement("table");
+    
+    function tablaConductores (conductores) {
+        tabla.classList.add("table");
+        let tr = document.createElement("tr");  
+        let th = document.createElement("th");
+        th.setAttribute("scope" , "row");
+        th.innerText="Posición";
+        let td = document.createElement("td");
+        td.innerText="Piloto";
+        td.setAttribute("scope" , "row");
+        tabla.appendChild(tr);
+        tr.appendChild(th);
+        tr.appendChild(td);
+        for (j=0 ; j<conductores.length ; j++){
+            let trCond = document.createElement("tr");  
+            let thCond = document.createElement("th");
+            thCond.innerText=j+1;
+            let tdCond = document.createElement("td");
+            tdCond.innerText=conductores[j];
+            trCond.appendChild(thCond);
+            trCond.appendChild(tdCond);
+            tabla.appendChild(trCond);
+        };
+    }
+    tablaConductores(conductoresOrdenados);
+    
+    divRowMainSimulador.appendChild(tabla);
 };
 
 function eliminar (){
@@ -205,5 +211,5 @@ function eliminar (){
     eliminados.parentNode.removeChild(eliminados);
 };   
 
-btnAceptar.addEventListener("click" , aceptar);
+btnAceptar.addEventListener("click" , simuladorPiloto);
 btnEliminar.addEventListener("click" , eliminar);

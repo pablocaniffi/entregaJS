@@ -50,4 +50,3 @@ let escuderia = async () => {
     }
 };
 escuderia();
-// a veces soy tan groso que ni yo me doy cuenta
