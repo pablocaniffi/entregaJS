@@ -171,17 +171,23 @@ let simuladorPiloto = async()=> {
         timer: 3800
     });
     
-    tabla = document.createElement("table");
+    let tabla = document.createElement("table");
+    tabla.classList.add("card");
+    tabla.classList.add("col-6");
     
+    // que despelote que es bootstrap con js
     function tablaConductores (conductores) {
-        // tabla.classList.add("table");
         let tr = document.createElement("tr");
+        tr.classList.add("info");
+        tr.classList.add("text-center");
         let th = document.createElement("th");
         th.setAttribute("scope" , "row");
         th.innerText="Posición";
+        th.classList.add("col-2");
         let td = document.createElement("td");
-        td.innerText="Piloto";
+        td.innerText="Piloto";  
         td.setAttribute("scope" , "row");
+        td.classList.add("col-4");
         tabla.appendChild(tr);
         tr.appendChild(th);
         tr.appendChild(td);
@@ -189,8 +195,14 @@ let simuladorPiloto = async()=> {
             let trCond = document.createElement("tr");  
             let thCond = document.createElement("th");
             thCond.innerText=j+1;
+            thCond.classList.add("col-1");
+            thCond.classList.add("info");
+            thCond.classList.add("text-center");
             let tdCond = document.createElement("td");
             tdCond.innerText=conductores[j];
+            tdCond.classList.add("info");
+            tdCond.classList.add("col-5");
+            tdCond.classList.add("text-end");
             trCond.appendChild(thCond);
             trCond.appendChild(tdCond);
             tabla.appendChild(trCond);
