@@ -1,7 +1,7 @@
 
 // cosas a hacer
 // ver si vale la pena el dark-mode
-// consumir api x fuera
+// ordenar bien la página
 
 // ARCHIVO CON LAS ENTREGAS 1 Y 2
 

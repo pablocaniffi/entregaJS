@@ -62,7 +62,10 @@ btnEliminar.innerText="ELIMINAR TABLAS";
 divBtnEliminar.appendChild(btnEliminar);
 divRowMainSimulador.appendChild(divBtnEliminar);
 
-
+let divisorTabla = document.createElement("div");
+divisorTabla.classList.add("row");
+divisorTabla.classList.add("table");
+divRowMainSimulador.appendChild(divisorTabla);
 
 
 // ESTRATEGIA
@@ -144,12 +147,7 @@ let simuladorPiloto = async()=> {
         pilotosCarrera.push(new carrera(item.nombre , item.valor))
     };
 
-    let i=0; 
-
-    console.log(pilotosCarrera);
-    pilotosCarrera.sort( (a , b) => (a.valor<b.valor ? 1 : -1));
-    
-      
+    pilotosCarrera.sort( (a , b) => (a.valor<b.valor ? 1 : -1));       
     let h=0;
     for (h=0 ; h<7 ; h++){
         pilotosCarrera[h].valor= (pilotosCarrera[h].valor+((JSON.parse(sessionStorage.getItem("estrategia"))))-((JSON.parse(sessionStorage.getItem("lluvia")))));
@@ -160,16 +158,13 @@ let simuladorPiloto = async()=> {
     
     for (h=11 ; h<pilotosCarrera.length ; h++){
         pilotosCarrera[h].valor= (pilotosCarrera[h].valor+((JSON.parse(sessionStorage.getItem("estrategia"))))-((JSON.parse(sessionStorage.getItem("lluvia")))))/((JSON.parse(sessionStorage.getItem("choque")))+0.1);
-    
-    
     };
     pilotosCarrera.forEach((numero)=>numero.valor*Math.random()*JSON.parse(sessionStorage.getItem("choque")));
-    
     pilotosCarrera.sort( (a , b) => (a.valor<b.valor ? 1 : -1));
     let conductoresOrdenados = pilotosCarrera.map( piloto => piloto.nombre);
     
     Swal.fire({
-        position: "top-end",
+        position: "center",
         icon: "info",
         title: "El ganador es " + pilotosCarrera[0].nombre,
         showConfirmButton: false,
@@ -179,8 +174,8 @@ let simuladorPiloto = async()=> {
     tabla = document.createElement("table");
     
     function tablaConductores (conductores) {
-        tabla.classList.add("table");
-        let tr = document.createElement("tr");  
+        // tabla.classList.add("table");
+        let tr = document.createElement("tr");
         let th = document.createElement("th");
         th.setAttribute("scope" , "row");
         th.innerText="Posición";
@@ -203,7 +198,7 @@ let simuladorPiloto = async()=> {
     }
     tablaConductores(conductoresOrdenados);
     
-    divRowMainSimulador.appendChild(tabla);
+    divisorTabla.appendChild(tabla);
 };
 
 function eliminar (){
