@@ -29,7 +29,7 @@ seccionCards.classList.add("col-12");
 divRowMainPilotos.appendChild(seccionCards);
 let pilotos = [];
 let cardPiloto = async()=> {
-    let rtaCardPiloto = await fetch ("./1pilotos.json");
+    let rtaCardPiloto = await fetch ("../1pilotos.json");
     let datos = await rtaCardPiloto.json();
     let data = await datos;
     for (item of data) {
